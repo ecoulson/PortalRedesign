@@ -5,10 +5,10 @@ import QuickLinks from "./QuickLinks";
 
 const Header : React.SFC<{}> = (props) => {
     return (
-        <div className="header">
+        <header className="header">
             <Top />
             <QuickLinks />
-        </div>
+        </header>
     )
 }
 

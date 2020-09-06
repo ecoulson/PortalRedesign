@@ -1,0 +1,16 @@
+.nav-bar {
+    grid-area: navbar;
+    height: 100%;
+    width: 100%;
+    background-color: #2F3640;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+    .nav-bar {
+        background-color: #020202;
+        flex-direction: column;
+    }
+}

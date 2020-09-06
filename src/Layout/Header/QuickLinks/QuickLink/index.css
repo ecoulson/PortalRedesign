@@ -19,3 +19,11 @@
     line-height: 0px;
     margin: 0;
 }
+
+@media (min-width: 768px) {
+    .quick-link-text {
+        font-size: 14px;
+        letter-spacing: 0.07em;
+        margin: 0 8px;
+    }
+}

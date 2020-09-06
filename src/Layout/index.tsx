@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import "./index.css";
+import NavBar from "./NavBar";
+import Main from "./Main";
 
 const Layout : React.SFC<{}> = (props) => {
     return (
         <div className="app-layout">
             <Header />
-            {props.children}
+            <Main>{props.children}</Main>
+            <NavBar />
         </div>
     )
 }

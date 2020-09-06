@@ -8,3 +8,14 @@
         "main"
         "navbar";
 }
+
+@media (min-width: 768px) {
+    .app-layout {
+        height: 100vh;
+        grid-template-columns: 95px auto;
+        grid-template-rows: 130px auto;
+        grid-template-areas: 
+            "header header"
+            "navbar main";
+    }
+} 

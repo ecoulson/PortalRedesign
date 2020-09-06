@@ -1,0 +1,23 @@
+.nav-link {
+    width: 70px;
+    height: 55px;
+    fill: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link-active {
+    background-color: #F7C331;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.66);
+}
+
+.nav-link-active .nav-icon {
+    fill: #020202;
+}
+
+.nav-icon {
+    width: 35px;
+    height: 35px;
+}
