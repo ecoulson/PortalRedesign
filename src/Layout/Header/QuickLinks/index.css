@@ -1,0 +1,17 @@
+.quick-links-container {
+    display: flex;
+    align-items: center;
+    min-width: 100vw;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    width: auto;
+    position: relative;
+}
+
+.quick-links-wrapper {
+    display: flex;
+    grid-area: quicklinks;
+    flex-wrap: nowrap;
+    z-index: 1;
+    overflow-x: scroll;
+}

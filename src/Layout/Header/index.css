@@ -1,0 +1,12 @@
+.header {
+    grid-area: header;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 85px;
+    background-color: #2F3640;
+    grid-template-areas: 
+        "top"
+        "quicklinks";
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

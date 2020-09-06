@@ -1,0 +1,10 @@
+.app-layout {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 130px auto 75px;
+    grid-template-areas:
+        "header"
+        "main"
+        "navbar";
+}
