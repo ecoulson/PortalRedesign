@@ -37,6 +37,7 @@ const NavBar : React.FC<{}> = () => {
             {
                 NavLinks.map((navLink, i) => 
                     <NavLink 
+                        key={i}
                         active={active === i} 
                         setSliderPosition={
                             (sliderPosition: number) => setSliderPosition(sliderPosition) 

@@ -19,10 +19,17 @@ interface Props {
 const NavLink : React.FC<Props> = (props) => {
     const link = useRef(null);
     useEffect(() => {
-        if (props.active) {
-            props.setSliderPosition(getSliderPosition(link.current as unknown as HTMLElement))
+        handleActiveLink(props, link);
+        return function cleanup() {
+            window.removeEventListener("resize", () => {
+                handleActiveLink(props, link);
+            })
         }
-    }) 
+    })
+    window.addEventListener("resize", () => {
+        handleActiveLink(props, link);
+    })
+
     return (
         <Link
             ref={link}
@@ -34,6 +41,12 @@ const NavLink : React.FC<Props> = (props) => {
             </div>
         </Link>
     )
+}
+
+function handleActiveLink(props : Props, link : React.RefObject<null>) {
+    if (props.active && link.current) {
+        props.setSliderPosition(getSliderPosition(link.current as unknown as HTMLElement))
+    }
 }
 
 function handleClick(props : Props) {
