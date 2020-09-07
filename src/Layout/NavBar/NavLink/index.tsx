@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import NavIcon from "./NavIcon";
 import { ReactComponent as Home } from "../../../Assets/home.svg";
 import { ReactComponent as Transcript } from "../../../Assets/transcript.svg";
@@ -6,18 +6,57 @@ import { ReactComponent as Student } from "../../../Assets/student.svg";
 import { ReactComponent as CourseRegistration } from "../../../Assets/course-registration.svg";
 import { ReactComponent as Account } from "../../../Assets/account.svg";
 import "./index.css";
+import { Link } from "react-router-dom";
 
-const NavLink : React.SFC<{
+interface Props {
     icon: NavIcon,
-    active: boolean
-}> = (props) => {
+    to: string,
+    active: boolean,
+    setSliderPosition: (sliderPosition: number) => void;
+    onClick: () => void;
+}
+
+const NavLink : React.FC<Props> = (props) => {
+    const link = useRef(null);
+    useEffect(() => {
+        if (props.active) {
+            props.setSliderPosition(getSliderPosition(link.current as unknown as HTMLElement))
+        }
+    }) 
     return (
-        <div className={getClassName(props.active)}>
+        <Link
+            ref={link}
+            onClick={handleClick(props)} 
+            to={props.to} 
+            className={getClassName(props.active)}>
             <div className="nav-icon">
                 {renderIcon(props.icon)}
             </div>
-        </div>
+        </Link>
     )
+}
+
+function handleClick(props : Props) {
+    return (event : React.MouseEvent) => {
+        props.onClick();
+        props.setSliderPosition(getSliderPosition(event.target as HTMLElement));
+    }
+}
+
+function getSliderPosition(element : HTMLElement) {
+    if (window.innerWidth < 768) {
+        return findNavLink(element).offsetLeft;
+    } else {
+        return findNavLink(element).offsetTop;
+    }
+}
+
+function findNavLink(element : HTMLElement) : HTMLElement {
+    if (element.classList.contains("nav-link")) {
+        return element;
+    } else {
+        return findNavLink(element.parentNode as HTMLElement);
+    }
 }
 
 function getClassName(active: boolean) {

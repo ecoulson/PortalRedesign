@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     min-width: 100vw;
-    overflow-x: scroll;
     flex-wrap: nowrap;
     width: auto;
     position: relative;
