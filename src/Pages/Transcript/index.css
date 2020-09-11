@@ -1,0 +1,17 @@
+#transcript-grid {
+    grid-template-rows: 175px 100px auto;
+    grid-template-areas: 
+        "my-information"
+        "documents"
+        "transcripts";
+}
+
+@media (min-width: 768px) {
+    #transcript-grid {
+        grid-template-columns: 50%;
+        grid-template-rows: 200px auto;
+        grid-template-areas: 
+            "my-information documents"
+            "transcripts transcripts";
+    }
+}

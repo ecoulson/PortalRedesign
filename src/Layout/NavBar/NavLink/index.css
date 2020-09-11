@@ -1,0 +1,45 @@
+.nav-link {
+    width: 70px;
+    height: 55px;
+    fill: #D3D3D3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.nav-text {
+    display: none;
+}
+
+.nav-link-active .nav-icon {
+    fill: #020202;
+}
+
+.nav-icon {
+    width: 35px;
+    height: 35px;
+}
+
+@media (min-width: 768px) {
+    .nav-link {
+        height: 100px;
+        width: 80px;
+    }
+
+    .nav-link-active .nav-text {
+        color: #020202;
+    }
+
+    .nav-text {
+        display: block;
+        font-size: 12px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: #D3D3D3;
+    }
+}

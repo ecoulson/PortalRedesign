@@ -1,0 +1,9 @@
+.main {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    grid-area: main;
+    z-index: 2;
+    overflow-x: scroll;
+}

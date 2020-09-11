@@ -1,0 +1,15 @@
+#home-grid {
+    grid-template-areas: 
+        "today"
+        "announcements"
+        "courses";
+}
+
+@media (min-width: 768px) {
+    #home-grid {
+        grid-template-columns: 50%;
+        grid-template-areas: 
+            "today courses"
+            "announcements courses";
+    }
+}

@@ -1,0 +1,21 @@
+.app-layout {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 130px calc(100vh - 130px - 75px) 75px;
+    grid-template-areas:
+        "header"
+        "main"
+        "navbar";
+}
+
+@media (min-width: 768px) {
+    .app-layout {
+        height: 100vh;
+        grid-template-columns: 95px auto;
+        grid-template-rows: 130px auto;
+        grid-template-areas: 
+            "header header"
+            "navbar main";
+    }
+} 
