@@ -13,3 +13,8 @@
             "announcements courses";
     }
 }
+
+#today-section {
+    display: flex;
+    justify-content: center;
+}

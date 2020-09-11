@@ -3,6 +3,8 @@ import Grid from "../../Layout/Grid";
 import "./index.css";
 import Section from "../../Layout/Section";
 import SectionIcon from "../../Layout/Section/SectionIcon";
+import CourseCard from "../../Components/CourseCard";
+import CourseType from "../../Components/CourseCard/CourseType";
 
 const Home : React.SFC<{}> = () => {
     return (
@@ -13,6 +15,20 @@ const Home : React.SFC<{}> = () => {
                 name="Today"
                 icon={SectionIcon.Today}
                 id="today-section">
+                <CourseCard 
+                    name="Data Structure / Program Development" 
+                    time="12:30pm - 2:30pm"
+                    courseType={CourseType.ComputerScience}/>
+                    
+                <CourseCard 
+                    name="Engineering Systems" 
+                    time="8:40am - 9:40am"
+                    courseType={CourseType.Engineering}/>
+                   
+                <CourseCard 
+                    name="Electromagnetic Theory and Optics" 
+                    time="9:15am - 10:30am"
+                    courseType={CourseType.Physics}/>
                     
             </Section>
             <Section

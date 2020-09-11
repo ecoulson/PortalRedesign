@@ -18,12 +18,12 @@ interface Props {
 
 const Section : React.SFC<Props> = (props) => {
     return (
-        <section style={{gridArea: props.gridArea}} id={props.id} className="grid-section">
+        <section style={{gridArea: props.gridArea}} className="grid-section">
             <SectionHeader 
                 options={props.options} 
                 name={props.name} 
                 icon={props.icon} />
-            {props.children}
+            <div id={props.id} className="grid-section-children">{props.children}</div>
         </section>
     );
 }
