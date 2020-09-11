@@ -7,23 +7,28 @@ import NavSlider from "./NavSlider";
 const NavLinks = [
     {
         to: "/",
-        icon: NavIcon.Home
+        icon: NavIcon.Home,
+        text: "Home"
     },
     {
         to: "/transcript",
         icon: NavIcon.Transcript,
+        text: "Transcript"
     },
     {
         to: "/student",
-        icon: NavIcon.Student
+        icon: NavIcon.Student,
+        text: "Student"
     },
     {
         to: "/course-registration",
-        icon: NavIcon.CourseRegistration
+        icon: NavIcon.CourseRegistration,
+        text: "Course Registration"
     },
     {
         to: "/student-account",
-        icon: NavIcon.Account
+        icon: NavIcon.Account,
+        text: "Student Account"
     }
 ]
 
@@ -39,6 +44,7 @@ const NavBar : React.FC<{}> = () => {
                     <NavLink 
                         key={i}
                         active={active === i} 
+                        text={navLink.text}
                         setSliderPosition={
                             (sliderPosition: number) => setSliderPosition(sliderPosition) 
                         }

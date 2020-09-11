@@ -1,0 +1,9 @@
+.grid-section {
+    margin: 15px;
+}
+
+@media (min-width: 768px) {
+    .grid-section {
+        margin: 25px 45px;
+    }
+}

@@ -5,4 +5,5 @@
     background-color: white;
     grid-area: main;
     z-index: 2;
+    overflow-x: scroll;
 }

@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 interface Props {
     icon: NavIcon,
     to: string,
+    text: string;
     active: boolean,
     setSliderPosition: (sliderPosition: number) => void;
     onClick: () => void;
@@ -39,6 +40,7 @@ const NavLink : React.FC<Props> = (props) => {
             <div className="nav-icon">
                 {renderIcon(props.icon)}
             </div>
+            <span className="nav-text">{props.text}</span>
         </Link>
     )
 }

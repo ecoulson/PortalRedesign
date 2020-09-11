@@ -23,4 +23,9 @@
         align-items: baseline;
         justify-content: center;
     }
+
+    .nav-slider {
+        height: 100px;
+        width: 80px;
+    }
 }

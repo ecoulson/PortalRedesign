@@ -2,7 +2,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 130px auto 75px;
+    grid-template-rows: 130px calc(100vh - 130px - 75px) 75px;
     grid-template-areas:
         "header"
         "main"

@@ -1,0 +1,6 @@
+.grid-layout {
+    display: grid;
+    width: auto;
+    height: inherit;
+    box-sizing: border-box;
+}
